@@ -1,0 +1,2070 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Mermaid语法-流程图 | 理·型·健</title><meta name="keywords" content="LY,Markdown,办公工具"><meta name="author" content="李瑶瑶"><meta name="copyright" content="李瑶瑶"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Mermaid语法-流程图"><meta name="application-name" content="Mermaid语法-流程图"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Mermaid语法-流程图"><meta property="og:url" content="https://design.liyao.sbs/posts/69b5e8ee.html"><meta property="og:site_name" content="理·型·健"><meta property="og:description" content="Mermaid语法收集 参考文档：Mermaid中文网 使用方法  流程图 - 基础语法 流程图由节点（几何形状）和边（箭头或线条）组成。Mermaid 代码定义了如何制作节点和边，并适应不同的箭头类型、多方向箭头以及任何与子图的链接。  警告   如果你在流程图节点中使用单词 “end”，请将整个"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://img.liyao.sbs/file/1735051603251.jpg"><meta property="article:author" content="李瑶瑶"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://img.liyao.sbs/file/1735051603251.jpg"><meta name="description" content="Mermaid语法收集 参考文档：Mermaid中文网 使用方法  流程图 - 基础语法 流程图由节点（几何形状）和边（箭头或线条）组成。Mermaid 代码定义了如何制作节点和边，并适应不同的箭头类型、多方向箭头以及任何与子图的链接。  警告   如果你在流程图节点中使用单词 “end”，请将整个"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://design.liyao.sbs/posts/69b5e8ee.html"><link rel="preconnect" href="//cdn.cbd.int"><link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//static.cloudflareinsights.com"><link rel="preconnect" href="//www.clarity.ms"><link rel="preconnect" href="//cn.vercount.one"><meta name="google-site-verification" content="qVQPRlPsGLwefElyIXcCa19xJCFR-YswcQQU86AR8qs"><meta name="baidu-site-verification" content="codeva-zDDaVciH93"><meta name="msvalidate.01" content="98F483B4895CE615C2D7A240A641A7D2"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="var(--anzhiyu-main)"><link rel="mask-icon" href="/img/siteicon/apple-icon-180.png" color="#5bbad5"><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/apple-icon-180.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/apple-icon-180.png"><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"><link rel="bookmark" href="/img/siteicon/apple-icon-180.png"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?70a90354f5cdb4c33784dcd9edd3680a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-RZV18H08LS"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RZV18H08LS');
+</script><script defer="defer" data-pjax="data-pjax" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;4680556732724499aa561e0429873abc&quot;}"></script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "papnlgcynb");</script><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w客官再来玩儿呀！","backTitle":"٩(♡ε♡ )۶来了老弟！"},
+  LA51: {"enable":true,"ck":"3KVVvtlSU4KGNIou","LingQueMonitorID":"3KVW7LoDtAUaakjJ"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝~","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"both","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":null},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经发布超过","messageNext":"天，内容可能过时了。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":true,"limitCount":20,"languages":{"author":"作者: 李瑶瑶","link":"链接: ","source":"来源: 理·型·健","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '理·型·健',
+  title: 'Mermaid语法-流程图',
+  postAI: '',
+  pageFillDescription: 'Mermaid语法收集, 使用方法, 流程图 - 基础语法, 一个节点（默认）, 带有文本的节点, 方向, 节点形状, Mermaid 流程图中的扩展节点形状 (v11.3.0+), Mermaid 流程图中的特殊形状（v11.3.0+）, 节点之间的链接, 新的箭头类型, 多方向箭头, 链接的最小长度, 破坏语法的特殊字符, 子图, Markdown 字符串, 相互作用, 样式和类别, 对 fontawesome 的基本支持, 图形声明的顶点和链接之间有空格且没有分号 ​, 配置语法收集参考文档中文网使用方法流程图基础语法流程图由节点几何形状和边箭头或线条组成代码定义了如何制作节点和边并适应不同的箭头类型多方向箭头以及任何与子图的链接警告如果你在流程图节点中使用单词请将整个单词或任何字母大写例如或或应用此输入全部小写字母的将破坏流程图如果你使用字母或作为连接流程图节点的首字母请在字母前添加空格或将字母大写例如输入将创建输入将创建一个节点默认是框中显示的内容除了还可以使用带有文本的节点也可以在框中设置与不同的文本如果执行此操作多次则它将是为要使用的节点找到的最后一个文本此外如果稍后为节点定义边则可以省略文本定义渲染盒子时将使用先前定义的值统一码文本使用将文本括起来格式使用双引号和反引号将文本括起来方向该语句声明了流程图的方向这声明流程图是从上到下或这声明流程图是从左到右定向的可能的流程图方向是从上到下自上而下与自上而下相同从下到上右到左左到右节点形状具有圆边的节点体育场形状的节点子程序形状中的节点圆柱形节点一个圆形的节点形状不对称的节点目前只有上面的形状是可能的而不是它的镜像这可能会随着未来的版本而改变节点六边形节点平行四边形平行四边形梯形梯形双圈流程图中的扩展节点形状引入了种新形状以增强流程图创建的灵活性和精确度这些新形状提供了更多选项来直观地表示流程决策事件数据存储以及流程图中的其他元素从而提高清晰度和语义含义形状定义的新语法现在支持定义形状类型的通用语法以适应不断增长的形状数量此语法允许你使用清晰灵活的格式将特定形状分配给节点此语法将节点创建为矩形它的渲染方式与或相同新形状的完整列表以下是新引入的形状及其相应的语义含义简称和别名的完整列表下面内容不支持具有新形状的示例流程图进程事件终点体育场子流程数据库圆柱体开始圆形奇数决策菱形准备条件六边形数据输入输出向右倾斜数据输入输出向左倾斜优先操作梯形底面底部手动操作梯形底面顶部停止双圆圈文本块卡片缺口矩形带线阴影流程开始小圆形停止带框的圆圈分叉连接长矩形整理沙漏注释大括号注释右侧大括号右侧注释两侧均带括号闪电文档延迟半圆角矩形直接访问存储水平圆柱体磁盘存储带线圆柱体显示弧形梯形分割流程分割矩形提取小三角形内部存储窗格连接实心圆带线文档循环限制缺口五边形手动文件翻转三角形手动输入倾斜矩形多文档堆叠文档多进程堆叠矩形纸带标志存储的数据蝴蝶结矩形摘要带十字的圆圈标记的文档标记的流程标记矩形流程图中的特殊形状还引入了种特殊形状来增强你的流程图图标和图片这些形状允许你直接在流程图中包括图标和图片从而提供更多的视觉背景和清晰度图标形状你可以使用形状在流程图中包括图标要使用图标你需要先注册图标包按照提供的说明定义图标形状的语法如下参数图标来自注册图标包的图标名称表格指定图标的背景形状如果未定义图标将没有背景选项包括标签与图标关联的文本标签这可以是任何字符串如果未定义则不会显示任何标签标签的位置如果未定义标签将默认为图标底部可能的值是图标的高度如果未定义则默认为这是最小值图片形状你可以使用形状在流程图中包括图片定义图片形状的语法如下参数图片要显示的图片的标签与图片关联的文本标签这可以是任何字符串如果未定义则不会显示任何标签标签的位置如果未定义则标签将默认为图片底部可能的值是图片的宽度如果未定义则默认为图片的自然宽度图片的高度如果未定义则默认为图片的自然高度约束确定图片是否应限制节点大小此设置还确保图片保持其原始纵横比并根据宽度调整高度如果未定义则默认为可能的值是这些新形状为你的流程图提供了额外的灵活性和视觉吸引力使其更具信息性和吸引力节点之间的链接节点可以通过链接边连接可以有不同类型的链接或将文本字符串附加到链接带箭头的链接一个打开的链接链接上的文本带有箭头和文本的链接虚线链接带文本的虚线链接粗链接带文本的粗链接看不见的链接链接的链接新的箭头类型支持新类型的箭头圆边交叉边缘圆边示例交叉边缘示例多方向箭头链接的最小长度流程图中的每个节点最终根据其链接到的节点分配给渲染图中的一个等级即垂直或水平级别取决于流程图方向默认情况下链接可以跨越任意数量的等级但你可以通过在链接定义中添加额外的破折号来要求任何链接比其他链接更长在以下示例中在从节点到节点的链接中添加了两个额外的破折号以便它比常规链接多跨越两个等级注意链接仍可能比渲染引擎所请求的等级数更长以适应其他请求当链接标签写在链接中间时必须在链接右侧添加额外的破折号以下示例与上一个示例等效对于点链接或粗链接要添加的字符是等号或点如下表所示长度普通的正常带箭头厚的粗带箭头点状带有箭头的虚线破坏语法的特殊字符可以将文本放在引号内以渲染更麻烦的字符如下例所示用于转义字符的实体代码可以使用此处示例的语法对字符进行转义给出的数字以为基数因此可以编码为还支持使用字符名称子图下面是一个例子你还可以为子图设置显式流程图使用图形类型流程图还可以设置子图的边和子图的边如下流程图所示子图中的方向使用流程图你可以使用方向语句来设置子图渲染的方向如本例所示局限性如果任何子图的节点链接到外部则子图方向将被忽略相反子图将继承父图的方向字符串字符串功能通过提供更通用的字符串类型来增强流程图和思维导图该字符串类型支持粗体和斜体等文本格式选项并自动将文本换行在标签内格式设置对于粗体文本请在文本前后使用双星号对于斜体请在文本前后使用单个星号对于传统字符串你需要添加标签以使文本换行在节点中但是当文本变得太长时字符串会自动换行并允许你只需使用换行符而不是标记来开始新行此功能适用于节点标签边标签和子图标签可以通过使用禁用自动换行相互作用可以将单击事件绑定到节点单击可以导致回调或将在新浏览器选项卡中打开的链接使用时禁用此功能使用时启用此功能是节点的回调是在显示图形的页面上定义的函数的名称该函数将以作为参数进行调用下面的工具提示使用示例工具提示文本用双引号引起来工具提示的样式由类设置成功工具提示功能和链接到的功能从版本开始提供由于处理回调函数方式的限制可以在这个查看上述代码的替代工作演示默认情况下链接在同一浏览器选项卡窗口中打开可以通过向点击定义添加链接目标来更改此设置支持和初学者提示在上下文中使用交互式链接的完整示例注释可以在流程图中输入注释解析器将忽略这些注释注释需要独占一行并且必须以双百分号开头注释开始后到下一个换行符的任何文本都将被视为注释包括任何流语法样式和类别设置链接样式可以设置链接样式例如你可能想要设计一个在流程中向后移动的链接由于链接没有像节点一样的因此需要其他一些方法来决定链接应附加到什么样式使用图表中定义链接时的顺序号来代替或者使用默认值应用于所有链接在下面的示例中语句中定义的样式将属于图中的第四个链接还可以通过用逗号分隔链接编号在单个语句中向多个链接添加样式样式线条曲线如果默认方法不能满足你的需求可以设置用于项目之间线条的曲线类型的样式可用的曲线样式包括和在此示例中从左到右的图表使用曲线样式有关可用曲线的完整列表包括自定义曲线的说明请参阅项目中的形状文档设置节点样式可以对节点应用特定样式例如较粗的边框或不同的背景颜色类比每次定义样式更方便的是定义一类样式并将该类附加到应该具有不同外观的节点类定义如下例所示此外还可以在一条语句中为多个类定义样式将类附加到节点的操作如下还可以在一条语句中将一个类附加到节点列表添加类的一种较短形式是使用运算符将类名附加到节点如下所示当声明节点之间的多个链接时可以使用这种形式类还可以在样式中预定义类这些类可以从图形定义中应用如下例所示示例样式定义示例默认类别如果一个类被命名为它将被分配给所有没有特定类定义的类对的基本支持可以添加来自的图标通过语法访问图标如果网站上包含支持对可以使用的版本没有任何限制请参阅官方文档了解如何将其包含在你的网站中在中添加此代码片段将添加对的支持自定义图标只要网站导入相应的工具包就可以使用提供的自定义图标请注意目前这是的付费功能对于自定义图标你需要使用前缀示例并尝试渲染它图形声明的顶点和链接之间有空格且没有分号在图形声明中语句现在也可以不以分号结束在版本之后以分号结束图形语句只是可选的因此下面的图形声明也与旧的图形声明一样有效顶点和链接之间允许有一个空格但是顶点及其文本以及链接及其文本之间不应有任何空格图形声明的旧语法也将起作用因此这个新功能是可选的引入它是为了提高可读性下面是图边的新声明它与旧的图边声明一起有效配置渲染器图表的布局是通过渲染器完成的默认渲染器是从版本开始你可以使用名为的备用渲染器渲染器更适合更大和或更复杂的图表渲染器是一个实验性功能你可以通过添加以下指令将渲染器更改为请注意网站需要使用以上版本才能正常工作并在延迟加载配置中启用此功能宽度可以调整渲染流程图的宽度这是通过定义或通过使用带有配置的文件来完成的页面描述了如何使用可以设置为带有配置参数的字符串或相应的对象这是我自己搭建的网站用来记录和分享我自己研究的健身造型知识类似于一个知识库可以把这个网站分享给你身边的健身爱好者转载或节选引用务必注明为李瑶的原创您的支持和尊重是我更新的动力',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-03-02 03:33:54',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://pic.imgdb.cn/item/67474c28d0e0a243d4d3ac4f.jpg"><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">联系方式</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://pic.imgdb.cn/item/6748b9b2d0e0a243d4da8264.png" title="微信"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/674b1c9ed0e0a243d4db7acf.jpg" alt="微信"><span class="back-menu-item-text">微信</span></a><a class="back-menu-item" href="tel:+8617573412625" title="电话" rel="external nofollow noopener noreferrer" target="_blank"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/674b1ae8d0e0a243d4db7a6e.png" alt="电话"><span class="back-menu-item-text">电话</span></a><a class="back-menu-item" href="mailto:2313814221@qq.com" title="邮箱" rel="external nofollow noopener noreferrer" target="_blank"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/674b1adcd0e0a243d4db7a6d.png" alt="邮箱"><span class="back-menu-item-text">邮箱</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">福利</div><div class="back-menu-list"><a class="back-menu-item" href="/random_pic/" title="随机图片"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="随机图片"><span class="back-menu-item-text">随机图片</span></a><a class="back-menu-item" href="/xjj/" title="有氧氮泵"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/6752ab95d0e0a243d4de8402.jpg" alt="有氧氮泵"><span class="back-menu-item-text">有氧氮泵</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://img.liyao.sbs" title="Sanyue图床"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735204713540.png" alt="Sanyue图床"><span class="back-menu-item-text">Sanyue图床</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://ittools.liyao.sbs/" title="it-tools"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622880333.png" alt="it-tools"><span class="back-menu-item-text">it-tools</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://mindmap.liyao.sbs/" title="思维导图"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735623060543.png" alt="思维导图"><span class="back-menu-item-text">思维导图</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://calculator.liyao.sbs/" title="计算器"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735623158046.png" alt="计算器"><span class="back-menu-item-text">计算器</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://draw.liyao.sbs" title="手绘白板"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735116951760_IMG_2077.jpeg" alt="手绘白板"><span class="back-menu-item-text">手绘白板</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://drawui.liyao.sbs" title="无限画布"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735621967516.png" alt="无限画布"><span class="back-menu-item-text">无限画布</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://cover.liyao.sbs" title="CoverView"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622190725.png" alt="CoverView"><span class="back-menu-item-text">CoverView</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://picprose.liyao.sbs" title="PicProse"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622573265.png" alt="PicProse"><span class="back-menu-item-text">PicProse</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://fabritor.liyao.sbs" title="fabritor"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622649503.png" alt="fabritor"><span class="back-menu-item-text">fabritor</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">发现博客</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.foreverblog.cn/go.html" title="虫洞"><img class="back-menu-item-icon" src="https://img.foreverblog.cn/wormhole_3.gif" alt="虫洞"><span class="back-menu-item-text">虫洞</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">理·型·健</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 时间顺序</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 站点</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/statistics/"><i class="anzhiyufont anzhiyu-icon-square-poll-vertical faa-tada" style="font-size: 0.9em;"></i><span> 热力图</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=566816734&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/talks/"><i class="anzhiyufont anzhiyu-icon-fw-fire faa-tada" style="font-size: 0.9em;"></i><span> 胡说八道</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/wechat.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src="/wechat.jpg"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/alipay.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/alipay.jpg"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Cloudflare/" style="font-size: 1.05rem;">Cloudflare<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>5</sup></a><a href="/tags/LY/" style="font-size: 1.05rem;">LY<sup>9</sup></a><a href="/tags/Markdown/" style="font-size: 1.05rem;">Markdown<sup>3</sup></a><a href="/tags/Telegram/" style="font-size: 1.05rem;">Telegram<sup>1</sup></a><a href="/tags/%E5%81%8F%E9%87%8D%E5%BF%83%E7%AB%99%E7%AB%8B/" style="font-size: 1.05rem;">偏重心站立<sup>2</sup></a><a href="/tags/%E5%81%A5%E8%BA%AB%E9%80%A0%E5%9E%8B/" style="font-size: 1.05rem;">健身造型<sup>13</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">办公工具<sup>3</sup></a><a href="/tags/%E5%8F%A4%E5%85%B8%E9%80%A0%E5%9E%8B/" style="font-size: 1.05rem;">古典造型<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem;">图床<sup>1</sup></a><a href="/tags/%E5%B1%95%E8%83%8C/" style="font-size: 1.05rem;">展背<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99%E6%B5%8B%E8%AF%95/" style="font-size: 1.05rem;">建站测试<sup>2</sup></a><a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 1.05rem;">教学<sup>4</sup></a><a href="/tags/%E6%96%87%E7%A8%BF/" style="font-size: 1.05rem;">文稿<sup>5</sup></a><a href="/tags/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A5/" style="font-size: 1.05rem;">每日早报<sup>1</sup></a><a href="/tags/%E8%B5%84%E6%96%99/" style="font-size: 1.05rem;">资料<sup>12</sup></a><a href="/tags/%E9%80%A0%E5%9E%8B%E6%A6%82%E5%BF%B5/" style="font-size: 1.05rem;">造型概念<sup>1</sup></a></div></div><hr></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/03/"><span class="card-archive-list-date">三月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">27</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li></ul></div><hr></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" itemprop="url">网络技术</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/LY/" itemprop="url">LY</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/LY/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>LY</span></a><a class="article-meta__tags" href="/tags/Markdown/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Markdown</span></a><a class="article-meta__tags" href="/tags/%E5%8A%9E%E5%85%AC%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>办公工具</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Mermaid语法-流程图</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-12-10T22:29:15.000Z" title="发表于 2024-12-10 22:29:15">2024-12-10</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-03-02T03:33:54.997Z" title="更新于 2026-03-02 03:33:54">2026-03-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">8.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>39分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id data-flag-title="Mermaid语法-流程图"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为西安"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>西安</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/69b5e8ee.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/posts/69b5e8ee.html" itemprop="commentCount"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewbox="0 24 150 28" preserveaspectratio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"/></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"/><use href="#gentle-wave" x="48" y="3"/><use href="#gentle-wave" x="48" y="5"/><use href="#gentle-wave" x="48" y="7"/></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://img.liyao.sbs/file/1735051603251.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://creativecommons.org/licenses/by-nc-sa/4.0/"><header><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" itemprop="url">网络技术</a><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/LY/" itemprop="url">LY</a><a href="/tags/LY/" tabindex="-1" itemprop="url">LY</a><a href="/tags/Markdown/" tabindex="-1" itemprop="url">Markdown</a><a href="/tags/%E5%8A%9E%E5%85%AC%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url">办公工具</a><h1 id="CrawlerTitle" itemprop="name headline">Mermaid语法-流程图</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">李瑶瑶</span><time itemprop="dateCreated datePublished" datetime="2024-12-10T22:29:15.000Z" title="发表于 2024-12-10 22:29:15">2024-12-10</time><time itemprop="dateCreated datePublished" datetime="2026-03-02T03:33:54.997Z" title="更新于 2026-03-02 03:33:54">2026-03-02</time></header><h1 id="mermaid语法收集">Mermaid语法收集</h1>
+<p><strong>参考文档</strong>：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://mermaid.nodejs.cn/">Mermaid中文网</a></p>
+<h2 id="使用方法">使用方法</h2>
+<div style="text-align: center"><img src="https://img.liyao.sbs/file/1735052499768.png" alt="屏幕截图 2024-12-24 230117.png" width="60%"></div>
+<h2 id="流程图-基础语法">流程图 - 基础语法</h2>
+<p>流程图由节点（几何形状）和边（箭头或线条）组成。Mermaid 代码定义了如何制作节点和边，并适应不同的箭头类型、多方向箭头以及任何与子图的链接。</p>
+<blockquote>
+<p>警告<br>
+  如果你在流程图节点中使用单词 “end”，请将整个单词或任何字母大写（例如，“End” 或 “END”），或应用此 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/mermaid-js/mermaid/issues/1444#issuecomment-639528897">workaround</a>。输入全部小写字母的 “end” 将破坏流程图。<br>
+  如果你使用字母 “o” 或 “x” 作为连接流程图节点的首字母，请在字母前添加空格或将字母大写（例如，“dev— ops”、“dev—Ops”）。输入 “A—oB” 将创建 circle edge。输入 “A—xB” 将创建 cross edge</p>
+</blockquote>
+<h3 id="一个节点默认">一个节点（默认）</h3>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id</span><br></pre></td></tr></table></figure>
+<p>id 是框中显示的内容。除了<code>flowchart</code>，还可以使用 <code>graph</code>。</p>
+<h3 id="带有文本的节点">带有文本的节点</h3>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1[This is the text in the box]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1[This is the text in the box]</span><br></pre></td></tr></table></figure>
+<p>也可以在框中设置与 id 不同的文本。如果执行此操作多次，则它将是为要使用的节点找到的最后一个文本。此外，如果稍后为节点定义边，则可以省略文本定义。渲染盒子时将使用先前定义的值。</p>
+<p><strong>统一码文本</strong></p>
+<p>使用 <code>&quot;</code> 将 unicode 文本括起来。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id[&quot;This ❤ Unicode&quot;]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id[&quot;This ❤ Unicode&quot;]</span><br></pre></td></tr></table></figure>
+<p><s><strong>Markdown格式</strong></s></p>
+<p>使用双引号和反引号 “<code>text</code>” 将 Markdown 文本括起来。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  %%{init: {&quot;flowchart&quot;: {&quot;htmlLabels&quot;: false}} }%%
+flowchart LR
+    markdown[&quot;&#96;This **is** _Markdown_&#96;&quot;]
+    newLines[&quot;&#96;Line1
+    Line 2
+    Line 3&#96;&quot;]
+    markdown --&gt; newLines
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%%&#123;init: &#123;&quot;flowchart&quot;: &#123;&quot;htmlLabels&quot;: false&#125;&#125; &#125;%%</span><br><span class="line">flowchart LR</span><br><span class="line">    markdown[&quot;`This **is** _Markdown_`&quot;]</span><br><span class="line">    newLines[&quot;`Line1</span><br><span class="line">    Line 2</span><br><span class="line">    Line 3`&quot;]</span><br><span class="line">    markdown --&gt; newLines</span><br></pre></td></tr></table></figure>
+<h3 id="方向">方向</h3>
+<p>该语句声明了流程图的方向。</p>
+<p>这声明流程图是从上到下（<code>TD</code> 或 <code>TB</code>）。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    Start --&gt; Stop
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    Start --&gt; Stop</span><br></pre></td></tr></table></figure>
+<p>这声明流程图是从左到右定向的 (<code>LR</code>)。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    Start --&gt; Stop
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    Start --&gt; Stop</span><br></pre></td></tr></table></figure>
+<p>可能的流程图方向是：</p>
+<ul>
+<li>
+<p>TB - 从上到下</p>
+</li>
+<li>
+<p>TD - 自上而下/与自上而下相同</p>
+</li>
+<li>
+<p>BT - 从下到上</p>
+</li>
+<li>
+<p>RL - 右到左</p>
+</li>
+<li>
+<p>LR - 左到右</p>
+</li>
+</ul>
+<h3 id="节点形状">节点形状</h3>
+<p><strong>具有圆边的节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1(This is the text in the box)
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1(This is the text in the box)</span><br></pre></td></tr></table></figure>
+<p><strong>体育场形状的节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1([This is the text in the box])
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1([This is the text in the box])</span><br></pre></td></tr></table></figure>
+<p><strong>子程序形状中的节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1[[This is the text in the box]]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1[[This is the text in the box]]</span><br></pre></td></tr></table></figure>
+<p><strong>圆柱形节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1[(Database)]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1[(Database)]</span><br></pre></td></tr></table></figure>
+<p><strong>一个圆形的节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1((This is the text in the circle))
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1((This is the text in the circle))</span><br></pre></td></tr></table></figure>
+<p><strong>形状不对称的节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1&gt;This is the text in the box]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1&gt;This is the text in the box]</span><br></pre></td></tr></table></figure>
+<p>目前只有上面的形状是可能的，而不是它的镜像。这可能会随着未来的版本而改变。</p>
+<p><strong>节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1{This is the text in the box}
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1&#123;This is the text in the box&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>六边形节点</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1{This is the text in the box}
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    id1&#123;This is the text in the box&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>平行四边形</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    id1[&#x2F;This is the text in the box&#x2F;]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    id1[/This is the text in the box/]</span><br></pre></td></tr></table></figure>
+<p><strong>平行四边形</strong> alt</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    id1[\This is the text in the box\]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    id1[\This is the text in the box\]</span><br></pre></td></tr></table></figure>
+<p><strong>梯形</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A[&#x2F;Christmas\]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    A[/Christmas\]</span><br></pre></td></tr></table></figure>
+<p><strong>梯形</strong> alt</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    B[\Go shopping&#x2F;]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    B[\Go shopping/]</span><br></pre></td></tr></table></figure>
+<p><strong>双圈</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    id1(((This is the text in the circle)))
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    id1(((This is the text in the circle)))</span><br></pre></td></tr></table></figure>
+<h3 id="mermaid-流程图中的扩展节点形状-v1130">Mermaid 流程图中的扩展节点形状 (v11.3.0+)</h3>
+<p>Mermaid 引入了 30 种新形状，以增强流程图创建的灵活性和精确度。这些新形状提供了更多选项来直观地表示流程、决策、事件、数据存储以及流程图中的其他元素，从而提高清晰度和语义含义。</p>
+<p>形状定义的新语法</p>
+<p>Mermaid 现在支持定义形状类型的通用语法，以适应不断增长的形状数量。此语法允许你使用清晰灵活的格式将特定形状分配给节点：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A@&#123; shape: rect &#125;</span><br></pre></td></tr></table></figure>
+<p>此语法将节点 A 创建为矩形。它的渲染方式与 <code>A[&quot;A&quot;]</code> 或 <code>A</code> 相同。</p>
+<p><strong>新形状的完整列表</strong></p>
+<p>以下是新引入的形状及其相应的语义含义、简称和别名的完整列表：</p>
+<table>
+<thead>
+<tr>
+<th><strong>Semantic Name</strong></th>
+<th><strong>Shape Name</strong></th>
+<th><strong>Short Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Alias Supported</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Card</td>
+<td>Notched Rectangle</td>
+<td><code>notch-rect</code></td>
+<td>Represents a card</td>
+<td><code>card</code>, <code>notched-rectangle</code></td>
+</tr>
+<tr>
+<td>Collate</td>
+<td>Hourglass</td>
+<td><code>hourglass</code></td>
+<td>Represents a collate operation</td>
+<td><code>collate</code>, <code>hourglass</code></td>
+</tr>
+<tr>
+<td>Com Link</td>
+<td>Lightning Bolt</td>
+<td><code>bolt</code></td>
+<td>Communication link</td>
+<td><code>com-link</code>, <code>lightning-bolt</code></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Curly Brace</td>
+<td><code>brace</code></td>
+<td>Adds a comment</td>
+<td><code>brace-l</code>, <code>comment</code></td>
+</tr>
+<tr>
+<td>Comment Right</td>
+<td>Curly Brace</td>
+<td><code>brace-r</code></td>
+<td>Adds a comment</td>
+<td></td>
+</tr>
+<tr>
+<td>Comment with braces on both sides</td>
+<td>Curly Braces</td>
+<td><code>braces</code></td>
+<td>Adds a comment</td>
+<td></td>
+</tr>
+<tr>
+<td>Data Input/Output</td>
+<td>Lean Right</td>
+<td><code>lean-r</code></td>
+<td>Represents input or output</td>
+<td><code>in-out</code>, <code>lean-right</code></td>
+</tr>
+<tr>
+<td>Data Input/Output</td>
+<td>Lean Left</td>
+<td><code>lean-l</code></td>
+<td>Represents output or input</td>
+<td><code>lean-left</code>, <code>out-in</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td>Cylinder</td>
+<td><code>cyl</code></td>
+<td>Database storage</td>
+<td><code>cylinder</code>, <code>database</code>, <code>db</code></td>
+</tr>
+<tr>
+<td>Decision</td>
+<td>Diamond</td>
+<td><code>diam</code></td>
+<td>Decision-making step</td>
+<td><code>decision</code>, <code>diamond</code>, <code>question</code></td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>Half-Rounded Rectangle</td>
+<td><code>delay</code></td>
+<td>Represents a delay</td>
+<td><code>half-rounded-rectangle</code></td>
+</tr>
+<tr>
+<td>Direct Access Storage</td>
+<td>Horizontal Cylinder</td>
+<td><code>h-cyl</code></td>
+<td>Direct access storage</td>
+<td><code>das</code>, <code>horizontal-cylinder</code></td>
+</tr>
+<tr>
+<td>Disk Storage</td>
+<td>Lined Cylinder</td>
+<td><code>lin-cyl</code></td>
+<td>Disk storage</td>
+<td><code>disk</code>, <code>lined-cylinder</code></td>
+</tr>
+<tr>
+<td>Display</td>
+<td>Curved Trapezoid</td>
+<td><code>curv-trap</code></td>
+<td>Represents a display</td>
+<td><code>curved-trapezoid</code>, <code>display</code></td>
+</tr>
+<tr>
+<td>Divided Process</td>
+<td>Divided Rectangle</td>
+<td><code>div-rect</code></td>
+<td>Divided process shape</td>
+<td><code>div-proc</code>, <code>divided-process</code>, <code>divided-rectangle</code></td>
+</tr>
+<tr>
+<td>Document</td>
+<td>Document</td>
+<td><code>doc</code></td>
+<td>Represents a document</td>
+<td><code>doc</code>, <code>document</code></td>
+</tr>
+<tr>
+<td>Event</td>
+<td>Rounded Rectangle</td>
+<td><code>rounded</code></td>
+<td>Represents an event</td>
+<td><code>event</code></td>
+</tr>
+<tr>
+<td>Extract</td>
+<td>Triangle</td>
+<td><code>tri</code></td>
+<td>Extraction process</td>
+<td><code>extract</code>, <code>triangle</code></td>
+</tr>
+<tr>
+<td>Fork/Join</td>
+<td>Filled Rectangle</td>
+<td><code>fork</code></td>
+<td>Fork or join in process flow</td>
+<td><code>join</code></td>
+</tr>
+<tr>
+<td>Internal Storage</td>
+<td>Window Pane</td>
+<td><code>win-pane</code></td>
+<td>Internal storage</td>
+<td><code>internal-storage</code>, <code>window-pane</code></td>
+</tr>
+<tr>
+<td>Junction</td>
+<td>Filled Circle</td>
+<td><code>f-circ</code></td>
+<td>Junction point</td>
+<td><code>filled-circle</code>, <code>junction</code></td>
+</tr>
+<tr>
+<td>Lined Document</td>
+<td>Lined Document</td>
+<td><code>lin-doc</code></td>
+<td>Lined document</td>
+<td><code>lined-document</code></td>
+</tr>
+<tr>
+<td>Lined/Shaded Process</td>
+<td>Lined Rectangle</td>
+<td><code>lin-rect</code></td>
+<td>Lined process shape</td>
+<td><code>lin-proc</code>, <code>lined-process</code>, <code>lined-rectangle</code>, <code>shaded-process</code></td>
+</tr>
+<tr>
+<td>Loop Limit</td>
+<td>Trapezoidal Pentagon</td>
+<td><code>notch-pent</code></td>
+<td>Loop limit step</td>
+<td><code>loop-limit</code>, <code>notched-pentagon</code></td>
+</tr>
+<tr>
+<td>Manual File</td>
+<td>Flipped Triangle</td>
+<td><code>flip-tri</code></td>
+<td>Manual file operation</td>
+<td><code>flipped-triangle</code>, <code>manual-file</code></td>
+</tr>
+<tr>
+<td>Manual Input</td>
+<td>Sloped Rectangle</td>
+<td><code>sl-rect</code></td>
+<td>Manual input step</td>
+<td><code>manual-input</code>, <code>sloped-rectangle</code></td>
+</tr>
+<tr>
+<td>Manual Operation</td>
+<td>Trapezoid Base Top</td>
+<td><code>trap-t</code></td>
+<td>Represents a manual task</td>
+<td><code>inv-trapezoid</code>, <code>manual</code>, <code>trapezoid-top</code></td>
+</tr>
+<tr>
+<td>Multi-Document</td>
+<td>Stacked Document</td>
+<td><code>docs</code></td>
+<td>Multiple documents</td>
+<td><code>documents</code>, <code>st-doc</code>, <code>stacked-document</code></td>
+</tr>
+<tr>
+<td>Multi-Process</td>
+<td>Stacked Rectangle</td>
+<td><code>st-rect</code></td>
+<td>Multiple processes</td>
+<td><code>processes</code>, <code>procs</code>, <code>stacked-rectangle</code></td>
+</tr>
+<tr>
+<td>Odd</td>
+<td>Odd</td>
+<td><code>odd</code></td>
+<td>Odd shape</td>
+<td></td>
+</tr>
+<tr>
+<td>Paper Tape</td>
+<td>Flag</td>
+<td><code>flag</code></td>
+<td>Paper tape</td>
+<td><code>paper-tape</code></td>
+</tr>
+<tr>
+<td>Prepare Conditional</td>
+<td>Hexagon</td>
+<td><code>hex</code></td>
+<td>Preparation or condition step</td>
+<td><code>hexagon</code>, <code>prepare</code></td>
+</tr>
+<tr>
+<td>Priority Action</td>
+<td>Trapezoid Base Bottom</td>
+<td><code>trap-b</code></td>
+<td>Priority action</td>
+<td><code>priority</code>, <code>trapezoid</code>, <code>trapezoid-bottom</code></td>
+</tr>
+<tr>
+<td>Process</td>
+<td>Rectangle</td>
+<td><code>rect</code></td>
+<td>Standard process shape</td>
+<td><code>proc</code>, <code>process</code>, <code>rectangle</code></td>
+</tr>
+<tr>
+<td>Start</td>
+<td>Circle</td>
+<td><code>circ</code></td>
+<td>Starting point</td>
+<td><code>circ</code></td>
+</tr>
+<tr>
+<td>Start</td>
+<td>Small Circle</td>
+<td><code>sm-circ</code></td>
+<td>Small starting point</td>
+<td><code>small-circle</code>, <code>start</code></td>
+</tr>
+<tr>
+<td>Stop</td>
+<td>Double Circle</td>
+<td><code>dbl-circ</code></td>
+<td>Represents a stop point</td>
+<td><code>double-circle</code></td>
+</tr>
+<tr>
+<td>Stop</td>
+<td>Framed Circle</td>
+<td><code>fr-circ</code></td>
+<td>Stop point</td>
+<td><code>framed-circle</code>, <code>stop</code></td>
+</tr>
+<tr>
+<td>Stored Data</td>
+<td>Bow Tie Rectangle</td>
+<td><code>bow-rect</code></td>
+<td>Stored data</td>
+<td><code>bow-tie-rectangle</code>, <code>stored-data</code></td>
+</tr>
+<tr>
+<td>Subprocess</td>
+<td>Framed Rectangle</td>
+<td><code>fr-rect</code></td>
+<td>Subprocess</td>
+<td><code>framed-rectangle</code>, <code>subproc</code>, <code>subprocess</code>, <code>subroutine</code></td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>Crossed Circle</td>
+<td><code>cross-circ</code></td>
+<td>Summary</td>
+<td><code>crossed-circle</code>, <code>summary</code></td>
+</tr>
+<tr>
+<td>Tagged Document</td>
+<td>Tagged Document</td>
+<td><code>tag-doc</code></td>
+<td>Tagged document</td>
+<td><code>tag-doc</code>, <code>tagged-document</code></td>
+</tr>
+<tr>
+<td>Tagged Process</td>
+<td>Tagged Rectangle</td>
+<td><code>tag-rect</code></td>
+<td>Tagged process</td>
+<td><code>tag-proc</code>, <code>tagged-process</code>, <code>tagged-rectangle</code></td>
+</tr>
+<tr>
+<td>Terminal Point</td>
+<td>Stadium</td>
+<td><code>stadium</code></td>
+<td>Terminal point</td>
+<td><code>pill</code>, <code>terminal</code></td>
+</tr>
+<tr>
+<td>Text Block</td>
+<td>Text Block</td>
+<td><code>text</code></td>
+<td>Text block</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>下面内容不支持</p>
+</blockquote>
+<p><s><strong>具有新形状的示例流程图</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart RL
+    A@{ shape: manual-file, label: &quot;File Handling&quot;}
+    B@{ shape: manual-input, label: &quot;User   Input&quot;}
+    C@{ shape: docs, label: &quot;Multiple Documents&quot;}
+    D@{ shape: procs, label: &quot;Process Automation&quot;}
+    E@{ shape: paper-tape, label: &quot;Paper Records&quot;}
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart RL</span><br><span class="line">    A@&#123; shape: manual-file, label: &quot;File Handling&quot;&#125;</span><br><span class="line">    B@&#123; shape: manual-input, label: &quot;User   Input&quot;&#125;</span><br><span class="line">    C@&#123; shape: docs, label: &quot;Multiple Documents&quot;&#125;</span><br><span class="line">    D@&#123; shape: procs, label: &quot;Process Automation&quot;&#125;</span><br><span class="line">    E@&#123; shape: paper-tape, label: &quot;Paper Records&quot;&#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>进程</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: rect, label: &quot;This is a process&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: rect, label: &quot;This is a process&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>事件</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: rounded, label: &quot;This is an event&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: rounded, label: &quot;This is an event&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>终点 (体育场)</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: stadium, label: &quot;Terminal point&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: stadium, label: &quot;Terminal point&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>子流程</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: subproc, label: &quot;This is a subprocess&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: subproc, label: &quot;This is a subprocess&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>数据库（圆柱体）</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: cyl, label: &quot;Database&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: cyl, label: &quot;Database&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>开始 (圆形)</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: circle, label: &quot;Start&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: circle, label: &quot;Start&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>奇数</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: odd, label: &quot;Odd shape&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: odd, label: &quot;Odd shape&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>决策（菱形）</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: diamond, label: &quot;Decision&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: diamond, label: &quot;Decision&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>准备条件 (六边形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: hex, label: &quot;Prepare conditional&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: hex, label: &quot;Prepare conditional&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>数据输入/输出（向右倾斜）</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: lean-r, label: &quot;Input&#x2F;Output&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: lean-r, label: &quot;Input/Output&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>数据输入/输出（向左倾斜）</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: lean-l, label: &quot;Input&#x2F;Output&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: lean-l, label: &quot;Input/Output&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>优先操作(梯形底面底部)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: trap-b, label: &quot;Priority action&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: trap-b, label: &quot;Priority action&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>手动操作 (梯形底面顶部)</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: trap-t, label: &quot;Manual operation&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: trap-t, label: &quot;Manual operation&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>停止 (双圆圈)</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: dbl-circ, label: &quot;Stop&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: dbl-circ, label: &quot;Stop&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>文本块</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: text, label: &quot;This is a text block&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: text, label: &quot;This is a text block&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>卡片（缺口矩形）</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: notch-rect, label: &quot;Card&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: notch-rect, label: &quot;Card&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>带线/阴影流程</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: lin-rect, label: &quot;Lined process&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: lin-rect, label: &quot;Lined process&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>开始 (小圆形)</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: sm-circ, label: &quot;Small start&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: sm-circ, label: &quot;Small start&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>停止(带框的圆圈)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: framed-circle, label: &quot;Stop&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: framed-circle, label: &quot;Stop&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>分叉/连接 (长矩形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: fork, label: &quot;Fork or Join&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: fork, label: &quot;Fork or Join&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>整理（沙漏）</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: hourglass, label: &quot;Collate&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: hourglass, label: &quot;Collate&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>注释（大括号）</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: comment, label: &quot;Comment&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: comment, label: &quot;Comment&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>注释右侧（大括号右侧）</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: brace-r, label: &quot;Comment&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: brace-r, label: &quot;Comment&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>注释两侧均带括号</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: braces, label: &quot;Comment&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: braces, label: &quot;Comment&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>Com Link（闪电）</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: bolt, label: &quot;Communication link&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: bolt, label: &quot;Communication link&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>~~<strong>文档</strong> ~~</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: doc, label: &quot;Document&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: doc, label: &quot;Document&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>延迟（半圆角矩形）</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: delay, label: &quot;Delay&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: delay, label: &quot;Delay&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>直接访问存储（水平圆柱体）</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: das, label: &quot;Direct access storage&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: das, label: &quot;Direct access storage&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>磁盘存储 (带线圆柱体)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: lin-cyl, label: &quot;Disk storage&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: lin-cyl, label: &quot;Disk storage&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>显示 (弧形梯形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: curv-trap, label: &quot;Display&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: curv-trap, label: &quot;Display&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>分割流程 (分割矩形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: div-rect, label: &quot;Divided process&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: div-rect, label: &quot;Divided process&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>提取(小三角形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: tri, label: &quot;Extract&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: tri, label: &quot;Extract&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>内部存储(窗格)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: win-pane, label: &quot;Internal storage&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: win-pane, label: &quot;Internal storage&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>连接(实心圆)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: f-circ, label: &quot;Junction&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: f-circ, label: &quot;Junction&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>带线文档</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: lin-doc, label: &quot;Lined document&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: lin-doc, label: &quot;Lined document&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>循环限制(缺口五边形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: notch-pent, label: &quot;Loop limit&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: notch-pent, label: &quot;Loop limit&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>手动文件(翻转三角形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: flip-tri, label: &quot;Manual file&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: flip-tri, label: &quot;Manual file&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>手动输入(倾斜矩形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: sl-rect, label: &quot;Manual input&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: sl-rect, label: &quot;Manual input&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>多文档(堆叠文档)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: docs, label: &quot;Multiple documents&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: docs, label: &quot;Multiple documents&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>多进程(堆叠矩形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: processes, label: &quot;Multiple processes&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: processes, label: &quot;Multiple processes&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>纸带(标志)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: flag, label: &quot;Paper tape&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: flag, label: &quot;Paper tape&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>存储的数据(蝴蝶结矩形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: bow-rect, label: &quot;Stored data&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: bow-rect, label: &quot;Stored data&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>摘要(带十字的圆圈)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: cross-circ, label: &quot;Summary&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: cross-circ, label: &quot;Summary&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>标记的文档</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: tag-doc, label: &quot;Tagged document&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: tag-doc, label: &quot;Tagged document&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><s><strong>标记的流程(标记矩形)</strong></s></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A@{ shape: tag-rect, label: &quot;Tagged process&quot; }
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; shape: tag-rect, label: &quot;Tagged process&quot; &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="mermaid-流程图中的特殊形状v1130">Mermaid 流程图中的特殊形状（v11.3.0+）</h3>
+<p>Mermaid 还引入了 2 种特殊形状来增强你的流程图：图标和图片。这些形状允许你直接在流程图中包括图标和图片，从而提供更多的视觉背景和清晰度。</p>
+<p><s><strong>图标形状</strong></s></p>
+<p>你可以使用 <code>icon</code> 形状在流程图中包括图标。要使用图标，你需要先注册图标包。按照提供的说明。</p>
+<p>定义图标形状的语法如下：</p>
+<pre class="mermaid">flowchart TD
+    A@{ icon: "fa:user", form: "square", label: "User Icon", pos: "t", h: 60 }</pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A@&#123; icon: &quot;fa:user&quot;, form: &quot;square&quot;, label: &quot;User Icon&quot;, pos: &quot;t&quot;, h: 60 &#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>参数</strong></p>
+<ul>
+<li>
+<p>图标：来自注册图标包的图标名称。</p>
+</li>
+<li>
+<p>表格：指定图标的背景形状。如果未定义，图标将没有背景。选项包括：</p>
+<ul>
+<li>
+<p><code>square</code></p>
+</li>
+<li>
+<p><code>circle</code></p>
+</li>
+<li>
+<p><code>rounded</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>标签：与图标关联的文本标签。这可以是任何字符串。如果未定义，则不会显示任何标签。</p>
+</li>
+<li>
+<p>pos：标签的位置。如果未定义，标签将默认为图标底部。可能的值是：</p>
+<ul>
+<li>
+<p><code>t</code></p>
+</li>
+<li>
+<p><code>b</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>h：图标的高度。如果未定义，则默认为 48，这是最小值。</p>
+</li>
+</ul>
+<p><strong>图片形状</strong></p>
+<p>你可以使用 <code>image</code> 形状在流程图中包括图片。定义图片形状的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    A@&#123; img: &quot;https://example.com/image.png&quot;, label: &quot;Image Label&quot;, pos: &quot;t&quot;, w: 60, h: 60, constraint: &quot;off&quot; &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>参数</strong></p>
+<ul>
+<li>
+<p>图片：要显示的图片的 URL。</p>
+</li>
+<li>
+<p>标签：与图片关联的文本标签。这可以是任何字符串。如果未定义，则不会显示任何标签。</p>
+</li>
+<li>
+<p>pos：标签的位置。如果未定义，则标签将默认为图片底部。可能的值是：</p>
+<ul>
+<li>
+<p><code>t</code></p>
+</li>
+<li>
+<p><code>b</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>w：图片的宽度。如果未定义，则默认为图片的自然宽度。</p>
+</li>
+<li>
+<p>h：图片的高度。如果未定义，则默认为图片的自然高度。</p>
+</li>
+<li>
+<p>约束：确定图片是否应限制节点大小。此设置还确保图片保持其原始纵横比，并根据宽度（<code>w</code>）调整高度（<code>h</code>）。如果未定义，则默认为 <code>off</code>，可能的值是：</p>
+<ul>
+<li>
+<p><code>on</code></p>
+</li>
+<li>
+<p><code>off</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>这些新形状为你的流程图提供了额外的灵活性和视觉吸引力，使其更具信息性和吸引力。</p>
+<h3 id="节点之间的链接">节点之间的链接</h3>
+<p>节点可以通过链接/边连接。可以有不同类型的链接或将文本字符串附加到链接。</p>
+<p><strong>带箭头的链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A--&gt;B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A--&gt;B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>一个打开的链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A --- B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A --- B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>链接上的文本</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A-- This is the text! ---B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A-- This is the text! ---B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>带有箭头和文本的链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A--&gt;|text|B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A--&gt;|text|B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>虚线链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+   A-.-&gt;B;
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">   A-.-&gt;B;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>带文本的虚线链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+   A-. text .-&gt; B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">   A-. text .-&gt; B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>粗链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+   A &#x3D;&#x3D;&gt; B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">   A ==&gt; B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>带文本的粗链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+   A &#x3D;&#x3D; text &#x3D;&#x3D;&gt; B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">   A == text ==&gt; B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>看不见的链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A ~~~ B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A ~~~ B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>链接的链接</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+   A -- text --&gt; B -- text2 --&gt; C
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">   A -- text --&gt; B -- text2 --&gt; C</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="新的箭头类型">新的箭头类型</h3>
+<p><strong>支持新类型的箭头：</strong></p>
+<ul>
+<li>
+<p>圆边</p>
+</li>
+<li>
+<p>交叉边缘</p>
+</li>
+</ul>
+<p><strong>圆边示例</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A --o B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A --o B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>交叉边缘示例</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A --x B
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A --x B</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="多方向箭头"><s>多方向箭头</s></h3>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A o--o B
+    B &lt;--&gt; C
+    C x--x D
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A o--o B</span><br><span class="line">    B &lt;--&gt; C</span><br><span class="line">    C x--x D</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="链接的最小长度">链接的最小长度</h3>
+<p>流程图中的每个节点最终根据其链接到的节点分配给渲染图中的一个等级，即垂直或水平级别（取决于流程图方向）。默认情况下，链接可以跨越任意数量的等级，但你可以通过在链接定义中添加额外的破折号来要求任何链接比其他链接更长。</p>
+<p>在以下示例中，在从节点 B 到节点 E 的链接中添加了两个额外的破折号，以便它比常规链接多跨越两个等级：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A[Start] --&gt; B{Is it?}
+    B --&gt;|Yes| C[OK]
+    C --&gt; D[Rethink]
+    D --&gt; B
+    B ----&gt;|No| E[End]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A[Start] --&gt; B&#123;Is it?&#125;</span><br><span class="line">    B --&gt;|Yes| C[OK]</span><br><span class="line">    C --&gt; D[Rethink]</span><br><span class="line">    D --&gt; B</span><br><span class="line">    B ----&gt;|No| E[End]</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意</strong> 链接仍可能比渲染引擎所请求的等级数更长，以适应其他请求。</p>
+</blockquote>
+<p>当链接标签写在链接中间时，必须在链接右侧添加额外的破折号。以下示例与上一个示例等效：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    A[Start] --&gt; B{Is it?}
+    B -- Yes --&gt; C[OK]
+    C --&gt; D[Rethink]
+    D --&gt; B
+    B -- No ----&gt; E[End]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    A[Start] --&gt; B&#123;Is it?&#125;</span><br><span class="line">    B -- Yes --&gt; C[OK]</span><br><span class="line">    C --&gt; D[Rethink]</span><br><span class="line">    D --&gt; B</span><br><span class="line">    B -- No ----&gt; E[End]</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>对于点链接或粗链接，要添加的字符是等号或点，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>长度</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通的</td>
+<td><code>---</code></td>
+<td><code>----</code></td>
+<td><code>-----</code></td>
+</tr>
+<tr>
+<td>正常带箭头</td>
+<td><code>--&gt;</code></td>
+<td><code>---&gt;</code></td>
+<td><code>----&gt;</code></td>
+</tr>
+<tr>
+<td>厚的</td>
+<td><code>===</code></td>
+<td><code>====</code></td>
+<td><code>=====</code></td>
+</tr>
+<tr>
+<td>粗带箭头</td>
+<td><code>==&gt;</code></td>
+<td><code>===&gt;</code></td>
+<td><code>====&gt;</code></td>
+</tr>
+<tr>
+<td>点状</td>
+<td><code>-.-</code></td>
+<td><code>-..-</code></td>
+<td><code>-...-</code></td>
+</tr>
+<tr>
+<td>带有箭头的虚线</td>
+<td><code>-.-&gt;</code></td>
+<td><code>-..-&gt;</code></td>
+<td><code>-...-&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="破坏语法的特殊字符">破坏语法的特殊字符</h3>
+<p>可以将文本放在引号内以渲染更麻烦的字符。如下例所示：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1[&quot;This is the (text) in the box&quot;]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    id1[&quot;This is the (text) in the box&quot;]</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>用于转义字符的实体代码</strong></p>
+<p>可以使用此处示例的语法对字符进行转义。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A[&quot;A double quote:#quot;&quot;] --&gt; B[&quot;A dec char:#9829;&quot;]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A[&quot;A double quote:#quot;&quot;] --&gt; B[&quot;A dec char:#9829;&quot;]</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>给出的数字以 10 为基数，因此 <code>#</code> 可以编码为 <code>#35;</code>。还支持使用 HTML 字符名称。</p>
+<h3 id="子图">子图</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">subgraph title</span><br><span class="line">    graph definition</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>下面是一个例子：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TB</span><br><span class="line">    c1--&gt;a2</span><br><span class="line">    subgraph one</span><br><span class="line">    a1--&gt;a2</span><br><span class="line">    end</span><br><span class="line">    subgraph two</span><br><span class="line">    b1--&gt;b2</span><br><span class="line">    end</span><br><span class="line">    subgraph three</span><br><span class="line">    c1--&gt;c2</span><br><span class="line">    end</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>你还可以为子图设置显式 id。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TB
+    c1--&gt;a2
+    subgraph ide1 [one]
+    a1--&gt;a2
+    end
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TB</span><br><span class="line">    c1--&gt;a2</span><br><span class="line">    subgraph ide1 [one]</span><br><span class="line">    a1--&gt;a2</span><br><span class="line">    end</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>流程图</strong></p>
+<p>使用图形类型流程图，还可以设置子图的边和子图的边，如下流程图所示。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TB</span><br><span class="line">    c1--&gt;a2</span><br><span class="line">    subgraph one</span><br><span class="line">    a1--&gt;a2</span><br><span class="line">    end</span><br><span class="line">    subgraph two</span><br><span class="line">    b1--&gt;b2</span><br><span class="line">    end</span><br><span class="line">    subgraph three</span><br><span class="line">    c1--&gt;c2</span><br><span class="line">    end</span><br><span class="line">    one --&gt; two</span><br><span class="line">    three --&gt; two</span><br><span class="line">    two --&gt; c2</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>子图中的方向</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+  subgraph TOP
+    direction TB
+    subgraph B1
+        direction RL
+        i1 --&gt;f1
+    end
+    subgraph B2
+        direction BT
+        i2 --&gt;f2
+    end
+  end
+  A --&gt; TOP --&gt; B
+  B1 --&gt; B2
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">  subgraph TOP</span><br><span class="line">    direction TB</span><br><span class="line">    subgraph B1</span><br><span class="line">        direction RL</span><br><span class="line">        i1 --&gt;f1</span><br><span class="line">    end</span><br><span class="line">    subgraph B2</span><br><span class="line">        direction BT</span><br><span class="line">        i2 --&gt;f2</span><br><span class="line">    end</span><br><span class="line">  end</span><br><span class="line">  A --&gt; TOP --&gt; B</span><br><span class="line">  B1 --&gt; B2</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>使用 graphtype 流程图，你可以使用方向语句来设置子图渲染的方向，如本例所示。</p>
+<p><strong>局限性</strong></p>
+<p>如果任何子图的节点链接到外部，则子图方向将被忽略。相反，子图将继承父图的方向：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    subgraph subgraph1
+        direction TB
+        top1[top] --&gt; bottom1[bottom]
+    end
+    subgraph subgraph2
+        direction TB
+        top2[top] --&gt; bottom2[bottom]
+    end
+    %% ^ These subgraphs are identical, except for the links to them:
+
+    %% Link *to* subgraph1: subgraph1 direction is maintained
+    outside --&gt; subgraph1
+    %% Link *within* subgraph2:
+    %% subgraph2 inherits the direction of the top-level graph (LR)
+    outside ---&gt; top2
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    subgraph subgraph1</span><br><span class="line">        direction TB</span><br><span class="line">        top1[top] --&gt; bottom1[bottom]</span><br><span class="line">    end</span><br><span class="line">    subgraph subgraph2</span><br><span class="line">        direction TB</span><br><span class="line">        top2[top] --&gt; bottom2[bottom]</span><br><span class="line">    end</span><br><span class="line">    %% ^ These subgraphs are identical, except for the links to them:</span><br><span class="line"></span><br><span class="line">    %% Link *to* subgraph1: subgraph1 direction is maintained</span><br><span class="line">    outside --&gt; subgraph1</span><br><span class="line">    %% Link *within* subgraph2:</span><br><span class="line">    %% subgraph2 inherits the direction of the top-level graph (LR)</span><br><span class="line">    outside ---&gt; top2</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="markdown-字符串"><s>Markdown 字符串</s></h3>
+<p>“Markdown 字符串” 功能通过提供更通用的字符串类型来增强流程图和思维导图，该字符串类型支持粗体和斜体等文本格式选项，并自动将文本换行在标签内。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  %%{init: {&quot;flowchart&quot;: {&quot;htmlLabels&quot;: false}} }%%
+flowchart LR
+subgraph &quot;One&quot;
+  a(&quot;&#96;The **cat**
+  in the hat&#96;&quot;) -- &quot;edge label&quot; --&gt; b&#96;The **dog** in the hog&#96;
+end
+subgraph &quot;&#96;**Two**&#96;&quot;
+  c(&quot;&#96;The **cat**
+  in the hat&#96;&quot;) -- &quot;&#96;Bold **edge label**&#96;&quot; --&gt; d(&quot;The dog in the hog&quot;)
+end
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">%%&#123;init: &#123;&quot;flowchart&quot;: &#123;&quot;htmlLabels&quot;: false&#125;&#125; &#125;%%</span><br><span class="line">flowchart LR</span><br><span class="line">subgraph &quot;One&quot;</span><br><span class="line">  a(&quot;`The **cat**</span><br><span class="line">  in the hat`&quot;) -- &quot;edge label&quot; --&gt; b&#123;&#123;&quot;`The **dog** in the hog`&quot;&#125;&#125;</span><br><span class="line">end</span><br><span class="line">subgraph &quot;`**Two**`&quot;</span><br><span class="line">  c(&quot;`The **cat**</span><br><span class="line">  in the hat`&quot;) -- &quot;`Bold **edge label**`&quot; --&gt; d(&quot;The dog in the hog&quot;)</span><br><span class="line">end</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>格式设置：</p>
+<ul>
+<li>
+<p>对于粗体文本，请在文本前后使用双星号 (<code>**</code>)。</p>
+</li>
+<li>
+<p>对于斜体，请在文本前后使用单个星号 (<code>*</code>)。</p>
+</li>
+<li>
+<p>对于传统字符串，你需要添加 <code>&lt;br&gt;</code> 标签以使文本换行在节点中。但是，当文本变得太长时，Markdown 字符串会自动换行，并允许你只需使用换行符而不是 <code>&lt;br&gt;</code> 标记来开始新行。</p>
+</li>
+</ul>
+<p>此功能适用于节点标签、边标签和子图标签。</p>
+<p>可以通过使用禁用自动换行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">config:</span><br><span class="line">  markdownAutoWrap: false</span><br><span class="line">---</span><br><span class="line">graph LR</span><br></pre></td></tr></table></figure>
+<h3 id="相互作用">相互作用</h3>
+<p>可以将单击事件绑定到节点，单击可以导致 JavaScript 回调或将在新浏览器选项卡中打开的链接。</p>
+<blockquote>
+<p>使用 <code>securityLevel='strict'</code> 时禁用此功能，使用 <code>securityLevel='loose'</code> 时启用此功能。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">click nodeId callback</span><br><span class="line">click nodeId call callback()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>nodeId 是节点的 id</p>
+</li>
+<li>
+<p>回调是在显示图形的页面上定义的 javascript 函数的名称，该函数将以 nodeId 作为参数进行调用。</p>
+</li>
+</ul>
+<p>下面的工具提示使用示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">window</span>.<span class="property">callback</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(<span class="string">&#x27;A callback was triggered&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">  &#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>工具提示文本用双引号引起来。工具提示的样式由 <code>.mermaidTooltip</code> 类设置。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A--&gt;B
+    B--&gt;C
+    C--&gt;D
+    click A callback &quot;Tooltip for a callback&quot;
+    click B &quot;https:&#x2F;&#x2F;www.github.com&quot; &quot;This is a tooltip for a link&quot;
+    click C call callback() &quot;Tooltip for a callback&quot;
+    click D href &quot;https:&#x2F;&#x2F;www.github.com&quot; &quot;This is a tooltip for a link&quot;
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A--&gt;B</span><br><span class="line">    B--&gt;C</span><br><span class="line">    C--&gt;D</span><br><span class="line">    click A callback &quot;Tooltip for a callback&quot;</span><br><span class="line">    click B &quot;https://www.github.com&quot; &quot;This is a tooltip for a link&quot;</span><br><span class="line">    click C call callback() &quot;Tooltip for a callback&quot;</span><br><span class="line">    click D href &quot;https://www.github.com&quot; &quot;This is a tooltip for a link&quot;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>成功</strong> 工具提示功能和链接到 URL 的功能从 0.5.2 版本开始提供。</p>
+</blockquote>
+<blockquote>
+<p>由于 Docsify 处理 JavaScript 回调函数方式的限制，可以在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://jsfiddle.net/yk4h7qou/2/">这个 jsfiddle</a> 查看上述代码的替代工作演示。</p>
+</blockquote>
+<p>默认情况下，链接在同一浏览器选项卡/窗口中打开。可以通过向点击定义添加链接目标来更改此设置（支持 <code>_self</code>、<code>_blank</code>、<code>_parent</code> 和 <code>_top</code>）：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A--&gt;B
+    B--&gt;C
+    C--&gt;D
+    D--&gt;E
+    click A &quot;https:&#x2F;&#x2F;www.github.com&quot; _blank
+    click B &quot;https:&#x2F;&#x2F;www.github.com&quot; &quot;Open this in a new tab&quot; _blank
+    click C href &quot;https:&#x2F;&#x2F;www.github.com&quot; _blank
+    click D href &quot;https:&#x2F;&#x2F;www.github.com&quot; &quot;Open this in a new tab&quot; _blank
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A--&gt;B</span><br><span class="line">    B--&gt;C</span><br><span class="line">    C--&gt;D</span><br><span class="line">    D--&gt;E</span><br><span class="line">    click A &quot;https://www.github.com&quot; _blank</span><br><span class="line">    click B &quot;https://www.github.com&quot; &quot;Open this in a new tab&quot; _blank</span><br><span class="line">    click C href &quot;https://www.github.com&quot; _blank</span><br><span class="line">    click D href &quot;https://www.github.com&quot; &quot;Open this in a new tab&quot; _blank</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>初学者提示 — 在 html 上下文中使用交互式链接的完整示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">pre</span> <span class="attr">class</span>=<span class="string">&quot;mermaid&quot;</span>&gt;</span></span><br><span class="line">    flowchart LR</span><br><span class="line">        A--&gt;B</span><br><span class="line">        B--&gt;C</span><br><span class="line">        C--&gt;D</span><br><span class="line">        click A callback &quot;Tooltip&quot;</span><br><span class="line">        click B &quot;https://www.github.com&quot; &quot;This is a link&quot;</span><br><span class="line">        click C call callback() &quot;Tooltip&quot;</span><br><span class="line">        click D href &quot;https://www.github.com&quot; &quot;This is a link&quot;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="property">callback</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">alert</span>(<span class="string">&#x27;A callback was triggered&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> config = &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">startOnLoad</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">flowchart</span>: &#123; <span class="attr">useMaxWidth</span>: <span class="literal">true</span>, <span class="attr">htmlLabels</span>: <span class="literal">true</span>, <span class="attr">curve</span>: <span class="string">&#x27;cardinal&#x27;</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">securityLevel</span>: <span class="string">&#x27;loose&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;;</span></span><br><span class="line"><span class="language-javascript">    mermaid.<span class="title function_">initialize</span>(config);</span></span><br><span class="line"><span class="language-javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>注释</strong></p>
+<p>可以在流程图中输入注释，解析器将忽略这些注释。注释需要独占一行，并且必须以 %%（双百分号）开头。注释开始后到下一个换行符的任何文本都将被视为注释，包括任何流语法。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+%% this is a comment A -- text --&gt; B{node}
+   A -- text --&gt; B -- text2 --&gt; C
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">%% this is a comment A -- text --&gt; B&#123;node&#125;</span><br><span class="line">   A -- text --&gt; B -- text2 --&gt; C</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="样式和类别">样式和类别</h3>
+<p><strong>设置链接样式</strong></p>
+<p>可以设置链接样式。例如，你可能想要设计一个在流程中向后移动的链接。由于链接没有像节点一样的 id，因此需要其他一些方法来决定链接应附加到什么样式。使用图表中定义链接时的顺序号来代替 ids，或者使用默认值应用于所有链接。在下面的示例中，linkStyle 语句中定义的样式将属于图中的第四个链接：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linkStyle 3 stroke:#ff3,stroke-width:4px,color:red;</span><br></pre></td></tr></table></figure>
+<p>还可以通过用逗号分隔链接编号，在单个语句中向多个链接添加样式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linkStyle 1,2,7 color:blue;</span><br></pre></td></tr></table></figure>
+<p><strong>样式线条曲线</strong></p>
+<p>如果默认方法不能满足你的需求，可以设置用于项目之间线条的曲线类型的样式。可用的曲线样式包括 basis、bumpX、bumpY、cardinal、catmullRom、linear、monotoneX、monotoneY、natural、step、stepAfter 和 stepBefore。</p>
+<p>在此示例中，从左到右的图表使用 stepBefore 曲线样式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%%&#123; init: &#123; &#x27;flowchart&#x27;: &#123; &#x27;curve&#x27;: &#x27;stepBefore&#x27; &#125; &#125; &#125;%%</span><br><span class="line">graph LR</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<p>有关可用曲线的完整列表，包括自定义曲线的说明，请参阅 d3-shape 项目中的 形状 文档。</p>
+<p><strong>设置节点样式</strong></p>
+<p>可以对节点应用特定样式，例如较粗的边框或不同的背景颜色。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    id1(Start)--&gt;id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    id1(Start)--&gt;id2(Stop)</span><br><span class="line">    style id1 fill:#f9f,stroke:#333,stroke-width:4px</span><br><span class="line">    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>类</strong></p>
+<p>比每次定义样式更方便的是定义一类样式并将该类附加到应该具有不同外观的节点。</p>
+<p>类定义如下例所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classDef className fill:#f9f,stroke:#333,stroke-width:4px;</span><br></pre></td></tr></table></figure>
+<p>此外，还可以在一条语句中为多个类定义样式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classDef firstClassName,secondClassName font-size:12pt;</span><br></pre></td></tr></table></figure>
+<p>将类附加到节点的操作如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class nodeId1 className;</span><br></pre></td></tr></table></figure>
+<p>还可以在一条语句中将一个类附加到节点列表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class nodeId1,nodeId2 className;</span><br></pre></td></tr></table></figure>
+<p>添加类的一种较短形式是使用 <code>:::</code>运算符将类名附加到节点，如下所示：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A:::someclass --&gt; B
+    classDef someclass fill:#f96
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A:::someclass --&gt; B</span><br><span class="line">    classDef someclass fill:#f96</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>当声明节点之间的多个链接时可以使用这种形式：</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A:::foo &amp; B:::bar --&gt; C:::foobar
+    classDef foo stroke:#f00
+    classDef bar stroke:#0f0
+    classDef foobar stroke:#00f
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A:::foo &amp; B:::bar --&gt; C:::foobar</span><br><span class="line">    classDef foo stroke:#f00</span><br><span class="line">    classDef bar stroke:#0f0</span><br><span class="line">    classDef foobar stroke:#00f</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>CSS 类</strong></p>
+<p>还可以在 CSS 样式中预定义类，这些类可以从图形定义中应用，如下例所示：</p>
+<p>示例样式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  .cssClass &gt; rect &#123;</span><br><span class="line">    fill: #ff0000;</span><br><span class="line">    stroke: #ffff00;</span><br><span class="line">    stroke-width: 4px;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>定义示例</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A--&gt;B[AAA&lt;span&gt;BBB&lt;&#x2F;span&gt;]
+    B--&gt;D
+    class A cssClass
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A--&gt;B[AAA&lt;span&gt;BBB&lt;/span&gt;]</span><br><span class="line">    B--&gt;D</span><br><span class="line">    class A cssClass</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>默认类别</strong></p>
+<p>如果一个类被命名为 default，它将被分配给所有没有特定类定义的类。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classDef default fill:#f9f,stroke:#333,stroke-width:4px;</span><br></pre></td></tr></table></figure>
+<h3 id="对-fontawesome-的基本支持">对 fontawesome 的基本支持</h3>
+<p>可以添加来自 fontawesome 的图标。</p>
+<p>通过语法 fa:#icon class name# 访问图标。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    B[&quot;fa:fa-twitter for peace&quot;]
+    B--&gt;C[fa:fa-ban forbidden]
+    B--&gt;D(fa:fa-spinner)
+    B--&gt;E(A fa:fa-camera-retro perhaps?)
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    B[&quot;fa:fa-twitter for peace&quot;]</span><br><span class="line">    B--&gt;C[fa:fa-ban forbidden]</span><br><span class="line">    B--&gt;D(fa:fa-spinner)</span><br><span class="line">    B--&gt;E(A fa:fa-camera-retro perhaps?)</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>如果网站上包含 CSS，Mermaid 支持 Font Awesome。Mermaid 对可以使用的 Font Awesome 版本没有任何限制。</p>
+<p>请参阅 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://fontawesome.com/start">官方 Font Awesome 文档</a> 了解如何将其包含在你的网站中。</p>
+<p>在 <code>&lt;head&gt;</code> 中添加此代码片段将添加对 Font Awesome v6.5.1 的支持</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link</span><br><span class="line">  href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&quot;</span><br><span class="line">  rel=&quot;stylesheet&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>自定义图标</strong></p>
+<p>只要网站导入相应的工具包，就可以使用 Font Awesome 提供的自定义图标。</p>
+<p>请注意，目前这是 Font Awesome 的付费功能。</p>
+<p>对于自定义图标，你需要使用 fak 前缀。</p>
+<p>示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    B[fa:fa-twitter] %% standard icon</span><br><span class="line">    B--&gt;E(fak:fa-custom-icon-name) %% custom icon</span><br></pre></td></tr></table></figure>
+<p>并尝试渲染它</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart TD
+    B[&quot;fa:fa-twitter for peace&quot;]
+    B--&gt;C[&quot;fab:fa-truck-bold a custom icon&quot;]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart TD</span><br><span class="line">    B[&quot;fa:fa-twitter for peace&quot;]</span><br><span class="line">    B--&gt;C[&quot;fab:fa-truck-bold a custom icon&quot;]</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="图形声明的顶点和链接之间有空格且没有分号">图形声明的顶点和链接之间有空格且没有分号 ​</h3>
+<ul>
+<li>
+<p>在图形声明中，语句现在也可以不以分号结束。在 0.2.16 版本之后，以分号结束图形语句只是可选的。因此，下面的图形声明也与旧的图形声明一样有效。</p>
+</li>
+<li>
+<p>顶点和链接之间允许有一个空格。但是，顶点及其文本以及链接及其文本之间不应有任何空格。图形声明的旧语法也将起作用，因此这个新功能是可选的，引入它是为了提高可读性。</p>
+</li>
+</ul>
+<p>下面是图边的新声明，它与旧的图边声明一起有效。</p>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  flowchart LR
+    A[Hard edge] --&gt;|Link text| B(Round edge)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result one]
+    C --&gt;|Two| E[Result two]
+  </pre></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">flowchart LR</span><br><span class="line">    A[Hard edge] --&gt;|Link text| B(Round edge)</span><br><span class="line">    B --&gt; C&#123;Decision&#125;</span><br><span class="line">    C --&gt;|One| D[Result one]</span><br><span class="line">    C --&gt;|Two| E[Result two]</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置">配置</h3>
+<p><strong>渲染器</strong></p>
+<p>图表的布局是通过渲染器完成的。默认渲染器是 dagre。</p>
+<p>从 Mermaid 版本 9.4 开始，你可以使用名为 elk 的备用渲染器。Elk 渲染器更适合更大和/或更复杂的图表。</p>
+<p>Elk 渲染器是一个实验性功能。你可以通过添加以下指令将渲染器更改为 elk：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%%&#123;init: &#123;&quot;flowchart&quot;: &#123;&quot;defaultRenderer&quot;: &quot;elk&quot;&#125;&#125; &#125;%%</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>请注意，网站需要使用 Mermaid 9.4 以上版本才能正常工作，并在延迟加载配置中启用此功能。</p>
+</blockquote>
+<p><strong>宽度</strong></p>
+<p>可以调整渲染流程图的宽度。</p>
+<p>这是通过定义 mermaid.flowchartConfig 或通过 CLI 使用带有配置的 JSON 文件来完成的。mermaidCLI 页面描述了如何使用 CLI。mermaid.flowchartConfig 可以设置为带有配置参数的 JSON 字符串或相应的对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mermaid.flowchartConfig = &#123;</span><br><span class="line">    width: 100%</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div style="-webkit-touch-callout: none; -webkit-user-drag: none; border: 2px solid #FFA500; padding: 10px 20px; font-size: 13px; background-color: #5555; color: #11111;">
+     这是我自己搭建的blog网站，用来记录和分享我自己研究的健身造型知识，类似于一个知识库。可以把这个网站分享给你身边的健身爱好者，转载或节选引，用务必注明为“李瑶的原创”，您的支持和尊重是我更新的动力！
+    <center><img src="https://pic.imgdb.cn/item/6750834fd0e0a243d4dd95b7.png" alt="理型健" class="no-lightbox" width="50%" height="50%"><center>
+</center></center></div>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="https://design.liyao.sbs" title="头像"><img class="post-copyright__author_img_back" src="https://pic.imgdb.cn/item/67474c28d0e0a243d4d3ac4f.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src="https://pic.imgdb.cn/item/67474c28d0e0a243d4d3ac4f.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">李瑶瑶</div><div class="post-copyright__author_desc">明天你还记得我吗？</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://creativecommons.org/licenses/by-nc-sa/4.0/')">Mermaid语法-流程图</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/wechat.jpg" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/alipay.jpg" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://creativecommons.org/licenses/by-nc-sa/4.0/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">此文章版权归 李瑶瑶 所有，如有转载、节选或重新排列组合，请注明来自原作者</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__category-list"><a class="post-meta__box__categoryes" href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"><span class="categoryes-punctuation"> <i class="anzhiyufont anzhiyu-icon-inbox"></i></span>网络技术<span class="categoryesPageCount">10</span></a><a class="post-meta__box__categoryes" href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/LY/"><span class="categoryes-punctuation"> <i class="anzhiyufont anzhiyu-icon-inbox"></i></span>LY<span class="categoryesPageCount">5</span></a></div><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/LY/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>LY<span class="tagsPageCount">9</span></a><a class="post-meta__box__tags" href="/tags/Markdown/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Markdown<span class="tagsPageCount">3</span></a><a class="post-meta__box__tags" href="/tags/%E5%8A%9E%E5%85%AC%E5%B7%A5%E5%85%B7/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>办公工具<span class="tagsPageCount">3</span></a></div></div><div class="post_share"><div class="social-share" data-image="https://file.alapi.cn/60s/202603021772412336_head.png" data-sites="wechat,qq,weibo"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/41310.html"><img class="prev-cover" src="https://pic.imgdb.cn/item/6757f2a5d0e0a243d4e0fe1d.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">IFBB 职业联盟规则（二）男子项目</div></div></a></div><div class="next-post pull-right"><a href="/posts/545b7ddd.html"><img class="next-cover" src="https://pic.imgdb.cn/item/675355c8d0e0a243d4df0878.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo添加热力图页面</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/e699f339.html" title="Mermaid语法-时序图"><img class="cover" src="https://img.liyao.sbs/file/1735051603251.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-12-10</div><div class="title">Mermaid语法-时序图</div></div></a></div><div><a href="/posts/e3abb075.html" title="mermaid语法-类图"><img class="cover" src="https://img.liyao.sbs/file/1735051603251.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-12-10</div><div class="title">mermaid语法-类图</div></div></a></div><div><a href="/posts/4609.html" title="我是男的李瑶瑶"><img class="cover" src="https://pic.imgdb.cn/item/6747667fd0e0a243d4d4aba2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-11-27</div><div class="title">我是男的李瑶瑶</div></div></a></div><div><a href="/posts/31415.html" title="健身造型认知（2020年未完成）"><img class="cover" src="https://pic.imgdb.cn/item/674762e4d0e0a243d4d48181.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-12-03</div><div class="title">健身造型认知（2020年未完成）</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src="https://pic.imgdb.cn/item/67474c28d0e0a243d4d3ac4f.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"><div class="author-status"><img class="g-status" src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);"><b style="color:#fff">精神世界丰满，灵感永不枯竭</b></div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">思想之河泛起的每一滴浪花都值得被记录</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about"><h1 class="author-info__name">李瑶瑶</h1><div class="author-info__desc">明天你还记得我吗？</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://v.douyin.com/iDUMxeGx/" target="_blank" title="抖音" rel="external nofollow noopener noreferrer"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1264765640" target="_blank" title="BiliBili" rel="external nofollow noopener noreferrer"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mermaid%E8%AF%AD%E6%B3%95%E6%94%B6%E9%9B%86"><span class="toc-text">Mermaid语法收集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">流程图 - 基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E8%8A%82%E7%82%B9%E9%BB%98%E8%AE%A4"><span class="toc-text">一个节点（默认）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E6%96%87%E6%9C%AC%E7%9A%84%E8%8A%82%E7%82%B9"><span class="toc-text">带有文本的节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%90%91"><span class="toc-text">方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%BD%A2%E7%8A%B6"><span class="toc-text">节点形状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mermaid-%E6%B5%81%E7%A8%8B%E5%9B%BE%E4%B8%AD%E7%9A%84%E6%89%A9%E5%B1%95%E8%8A%82%E7%82%B9%E5%BD%A2%E7%8A%B6-v1130"><span class="toc-text">Mermaid 流程图中的扩展节点形状 (v11.3.0+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mermaid-%E6%B5%81%E7%A8%8B%E5%9B%BE%E4%B8%AD%E7%9A%84%E7%89%B9%E6%AE%8A%E5%BD%A2%E7%8A%B6v1130"><span class="toc-text">Mermaid 流程图中的特殊形状（v11.3.0+）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E4%B9%8B%E9%97%B4%E7%9A%84%E9%93%BE%E6%8E%A5"><span class="toc-text">节点之间的链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E7%9A%84%E7%AE%AD%E5%A4%B4%E7%B1%BB%E5%9E%8B"><span class="toc-text">新的箭头类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%96%B9%E5%90%91%E7%AE%AD%E5%A4%B4"><span class="toc-text">多方向箭头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E7%9A%84%E6%9C%80%E5%B0%8F%E9%95%BF%E5%BA%A6"><span class="toc-text">链接的最小长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A0%B4%E5%9D%8F%E8%AF%AD%E6%B3%95%E7%9A%84%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="toc-text">破坏语法的特殊字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E5%9B%BE"><span class="toc-text">子图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">Markdown 字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8"><span class="toc-text">相互作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%92%8C%E7%B1%BB%E5%88%AB"><span class="toc-text">样式和类别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9-fontawesome-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%94%AF%E6%8C%81"><span class="toc-text">对 fontawesome 的基本支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E5%A3%B0%E6%98%8E%E7%9A%84%E9%A1%B6%E7%82%B9%E5%92%8C%E9%93%BE%E6%8E%A5%E4%B9%8B%E9%97%B4%E6%9C%89%E7%A9%BA%E6%A0%BC%E4%B8%94%E6%B2%A1%E6%9C%89%E5%88%86%E5%8F%B7"><span class="toc-text">图形声明的顶点和链接之间有空格且没有分号 ​</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/64098.html" title="【今日早报】"><img src="https://file.alapi.cn/60s/202603021772412336_head.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【今日早报】"></a><div class="content"><a class="title" href="/posts/64098.html" title="【今日早报】">【今日早报】</a><time datetime="2026-03-02T09:00:00.000Z" title="发表于 2026-03-02 09:00:00">2026-03-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4bf9b008.html" title="圆中百知模型卡片"><img src="https://pic.imgdb.cn/item/674762e4d0e0a243d4d48181.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="圆中百知模型卡片"></a><div class="content"><a class="title" href="/posts/4bf9b008.html" title="圆中百知模型卡片">圆中百知模型卡片</a><time datetime="2025-03-22T14:28:10.000Z" title="发表于 2025-03-22 14:28:10">2025-03-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/tanxunhuan.html" title="【凯圣王】碳循环饮食计算器"><img src="https://img.liyao.sbs/file/1739271560841_【凯圣王】碳循环饮食计算器.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【凯圣王】碳循环饮食计算器"></a><div class="content"><a class="title" href="/posts/tanxunhuan.html" title="【凯圣王】碳循环饮食计算器">【凯圣王】碳循环饮食计算器</a><time datetime="2025-02-11T19:00:07.000Z" title="发表于 2025-02-11 19:00:07">2025-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2a7ed072.html" title="vercel离线部署tldraw无限画布+免费ChatGPT 4o mini将简单线框转换成html页面"><img src="https://img.liyao.sbs/file/1735478350060.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vercel离线部署tldraw无限画布+免费ChatGPT 4o mini将简单线框转换成html页面"></a><div class="content"><a class="title" href="/posts/2a7ed072.html" title="vercel离线部署tldraw无限画布+免费ChatGPT 4o mini将简单线框转换成html页面">vercel离线部署tldraw无限画布+免费ChatGPT 4o mini将简单线框转换成html页面</a><time datetime="2024-12-29T16:00:31.000Z" title="发表于 2024-12-29 16:00:31">2024-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/617a66f4.html" title="IFBB 精英联盟规则：女子比基尼"><img src="https://pic.imgdb.cn/item/6761339cd0e0a243d4e52e2a.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IFBB 精英联盟规则：女子比基尼"></a><div class="content"><a class="title" href="/posts/617a66f4.html" title="IFBB 精英联盟规则：女子比基尼">IFBB 精英联盟规则：女子比基尼</a><time datetime="2024-12-27T02:25:18.000Z" title="发表于 2024-12-27 02:25:18">2024-12-27</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="external nofollow noopener noreferrer" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="站点地图" href="/sitemap.xml">站点地图</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="版权声明" href="/copyright/">版权声明</a></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0" rel="external nofollow noopener noreferrer"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题" rel="external nofollow noopener noreferrer"><img src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管" rel="external nofollow noopener noreferrer"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2026 By <a class="footer-bar-link" href="/" title="李瑶瑶" target="_blank">李瑶瑶</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+    jinrishici.load(result =>{
+      if (true) {
+        const sub = ["不必多言"]
+        const content = result.data.content
+        sub.unshift(content)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = result.data.content
+      }
+    })
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://img.liyao.sbs/file/1735321016305_mmexport1585191869122.jpg" title="请勿点击">请勿点击</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">8</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">联系方式</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://pic.imgdb.cn/item/6748b9b2d0e0a243d4da8264.png" title="微信"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/674b1c9ed0e0a243d4db7acf.jpg" alt="微信"><span class="back-menu-item-text">微信</span></a><a class="back-menu-item" href="tel:+8617573412625" title="电话" rel="external nofollow noopener noreferrer" target="_blank"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/674b1ae8d0e0a243d4db7a6e.png" alt="电话"><span class="back-menu-item-text">电话</span></a><a class="back-menu-item" href="mailto:2313814221@qq.com" title="邮箱" rel="external nofollow noopener noreferrer" target="_blank"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/674b1adcd0e0a243d4db7a6d.png" alt="邮箱"><span class="back-menu-item-text">邮箱</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">福利</div><div class="back-menu-list"><a class="back-menu-item" href="/random_pic/" title="随机图片"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="随机图片"><span class="back-menu-item-text">随机图片</span></a><a class="back-menu-item" href="/xjj/" title="有氧氮泵"><img class="back-menu-item-icon" src="https://pic.imgdb.cn/item/6752ab95d0e0a243d4de8402.jpg" alt="有氧氮泵"><span class="back-menu-item-text">有氧氮泵</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://img.liyao.sbs" title="Sanyue图床"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735204713540.png" alt="Sanyue图床"><span class="back-menu-item-text">Sanyue图床</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://ittools.liyao.sbs/" title="it-tools"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622880333.png" alt="it-tools"><span class="back-menu-item-text">it-tools</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://mindmap.liyao.sbs/" title="思维导图"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735623060543.png" alt="思维导图"><span class="back-menu-item-text">思维导图</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://calculator.liyao.sbs/" title="计算器"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735623158046.png" alt="计算器"><span class="back-menu-item-text">计算器</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://draw.liyao.sbs" title="手绘白板"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735116951760_IMG_2077.jpeg" alt="手绘白板"><span class="back-menu-item-text">手绘白板</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://drawui.liyao.sbs" title="无限画布"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735621967516.png" alt="无限画布"><span class="back-menu-item-text">无限画布</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://cover.liyao.sbs" title="CoverView"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622190725.png" alt="CoverView"><span class="back-menu-item-text">CoverView</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://picprose.liyao.sbs" title="PicProse"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622573265.png" alt="PicProse"><span class="back-menu-item-text">PicProse</span></a><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://fabritor.liyao.sbs" title="fabritor"><img class="back-menu-item-icon" src="https://img.liyao.sbs/file/1735622649503.png" alt="fabritor"><span class="back-menu-item-text">fabritor</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">发现博客</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.foreverblog.cn/go.html" title="虫洞"><img class="back-menu-item-icon" src="https://img.foreverblog.cn/wormhole_3.gif" alt="虫洞"><span class="back-menu-item-text">虫洞</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 时间顺序</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 站点</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/statistics/"><i class="anzhiyufont anzhiyu-icon-square-poll-vertical faa-tada" style="font-size: 0.9em;"></i><span> 热力图</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=566816734&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/talks/"><i class="anzhiyufont anzhiyu-icon-fw-fire faa-tada" style="font-size: 0.9em;"></i><span> 胡说八道</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Cloudflare/" style="font-size: 0.88rem;">Cloudflare<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>5</sup></a><a href="/tags/LY/" style="font-size: 0.88rem;">LY<sup>9</sup></a><a href="/tags/Markdown/" style="font-size: 0.88rem;">Markdown<sup>3</sup></a><a href="/tags/Telegram/" style="font-size: 0.88rem;">Telegram<sup>1</sup></a><a href="/tags/%E5%81%8F%E9%87%8D%E5%BF%83%E7%AB%99%E7%AB%8B/" style="font-size: 0.88rem;">偏重心站立<sup>2</sup></a><a href="/tags/%E5%81%A5%E8%BA%AB%E9%80%A0%E5%9E%8B/" style="font-size: 0.88rem;">健身造型<sup>13</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">办公工具<sup>3</sup></a><a href="/tags/%E5%8F%A4%E5%85%B8%E9%80%A0%E5%9E%8B/" style="font-size: 0.88rem;">古典造型<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 0.88rem;">图床<sup>1</sup></a><a href="/tags/%E5%B1%95%E8%83%8C/" style="font-size: 0.88rem;">展背<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99%E6%B5%8B%E8%AF%95/" style="font-size: 0.88rem;">建站测试<sup>2</sup></a><a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 0.88rem;">教学<sup>4</sup></a><a href="/tags/%E6%96%87%E7%A8%BF/" style="font-size: 0.88rem;">文稿<sup>5</sup></a><a href="/tags/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A5/" style="font-size: 0.88rem;">每日早报<sup>1</sup></a><a href="/tags/%E8%B5%84%E6%96%99/" style="font-size: 0.88rem;">资料<sup>12</sup></a><a href="/tags/%E9%80%A0%E5%9E%8B%E6%A6%82%E5%BF%B5/" style="font-size: 0.88rem;">造型概念<sup>1</sup></a></div></div><hr></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="566816734" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/#/playlist?id=566816734&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("11/28/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 李瑶瑶 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.cbd.int/mermaid@10.2.4/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'yyC0Wn5hTHRO3ojPHvqA1oTz-gzGzoHsz',
+      appKey: '3ibW367aXJRGX73Pg2fTfmqF',
+      avatar: 'mp',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.cbd.int/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script src="https://cdn.cbd.int/blueimp-md5@2.19.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=mp'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://yyC0Wn5h.api.lncldglobal.com'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": 'yyC0Wn5hTHRO3ojPHvqA1oTz-gzGzoHsz',
+        "X-LC-Key": '3ibW367aXJRGX73Pg2fTfmqF',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zindex="-1" count="99" mobile="false" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="true" data-text="功德+1,功德+1,功德+9999,变大,变粗,变干,钱来,钱来,钱从四面八方来" data-fontsize="18px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-RZV18H08LS', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//cn.vercount.one/js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+        
+        <script>
+            if(document.getElementById('heatmapChart')) {
+                const heatmapChart = echarts.init(document.getElementById('heatmapChart'), 'light');
+                const containerWidth = document.getElementById('heatmapChart').offsetWidth;
+                const cellSize = Math.max(Math.floor(containerWidth / 60));
+                heatmapChart.setOption({
+                    tooltip: {
+                        position: 'top',
+                        formatter: params => `${params.value[0]}: ${params.value[1]} Articles`
+                    },
+                    visualMap: {
+                        min: 0,
+                        max: Math.max(...[["2024-11-25",1],["2024-11-27",1],["2024-11-30",1],["2024-12-01",1],["2024-12-03",1],["2024-12-04",2],["2024-12-06",1],["2024-12-07",2],["2024-12-08",1],["2024-12-10",6],["2024-12-11",2],["2024-12-14",1],["2024-12-15",1],["2024-12-17",2],["2024-12-18",1],["2024-12-19",1],["2024-12-20",1],["2024-12-22",1],["2024-12-27",2],["2024-12-29",1],["2025-02-11",1],["2025-03-22",1],["2026-03-02",1]].map(item => item[1])),
+                        calculable: false,
+                        orient: 'horizontal',
+                        right: '5%',
+                        bottom: '5%',
+                        inRange: { color: ['#FFEFD5', '#FFA07A', '#FF4500'] }
+                    },
+                    calendar: {
+                        top: '20%',
+                        left: 'center',
+                        range: new Date().getFullYear(),
+                        cellSize: cellSize,
+                        splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } },
+                        itemStyle: { borderWidth: 1, borderColor: '#E0E0E0' },
+                        dayLabel: { firstDay: 1, fontSize: 12, color: '#333', show: false },
+                        monthLabel: { fontSize: 12, color: '#555' }
+                    },
+                    series: [{
+                        type: 'heatmap',
+                        coordinateSystem: 'calendar',
+                        data: [["2024-11-25",1],["2024-11-27",1],["2024-11-30",1],["2024-12-01",1],["2024-12-03",1],["2024-12-04",2],["2024-12-06",1],["2024-12-07",2],["2024-12-08",1],["2024-12-10",6],["2024-12-11",2],["2024-12-14",1],["2024-12-15",1],["2024-12-17",2],["2024-12-18",1],["2024-12-19",1],["2024-12-20",1],["2024-12-22",1],["2024-12-27",2],["2024-12-29",1],["2025-02-11",1],["2025-03-22",1],["2026-03-02",1]]
+                    }]
+                });
+                heatmapChart.on('click', function(params) {
+                    if (params.componentType === 'series') {
+                        const dateStr = params.value[0];
+                        const dateParts = dateStr.split('-');
+                        const year = parseInt(dateParts[0], 10);
+                        const month = parseInt(dateParts[1], 10);
+                        const formattedMonth = `${year}/${String(month).padStart(2, '0')}`;
+                        window.location.href = '/archives/' + formattedMonth;
+                    }
+                });
+            }
+        </script>
+    
+        
+        <script>
+            if(document.getElementById('monthlyChart')) {
+                const monthlyChart = echarts.init(document.getElementById('monthlyChart'), 'light');
+                monthlyChart.setOption({
+                    xAxis: {
+                        type: 'category',
+                        data: ["2024-11","2024-12","2025-02","2025-03","2026-03"],
+                        axisLabel: { fontSize: 12 }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } }
+                    },
+                    series: [{
+                        name: 'Articles',
+                        type: 'line',
+                        data: [3,27,1,1,1],
+                        smooth: true,
+                        lineStyle: { color: '#5470C6', width: 2 },
+                        itemStyle: { color: '#5470C6' },
+                        areaStyle: { color: 'rgba(84, 112, 198, 0.4)' },
+                        symbolSize: 10,
+                        animationDuration: 1000
+                    }]
+                });
+                monthlyChart.on('click', function(params) {
+                    if (params.componentType === 'series') {
+                        const year = params.name.split('-')[0];
+                        const month = params.name.split('-')[1];
+                        window.location.href = '/archives/' + year + '/' + month;
+                    }
+                });
+            }
+        </script>
+    
+        
+        <script>
+            if(document.getElementById('tagsChart')) {
+                const tagsChart = echarts.init(document.getElementById('tagsChart'), 'light');
+                tagsChart.setOption({
+                    xAxis: {
+                        type: 'value',
+                        splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } }
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: [{"name":"健身造型","value":13},{"name":"资料","value":12},{"name":"LY","value":9},{"name":"文稿","value":5},{"name":"Hexo","value":5},{"name":"教学","value":4},{"name":"Markdown","value":3},{"name":"办公工具","value":3}].map(category => category.name).reverse(),
+                        axisLabel: { fontSize: 12 }
+                    },
+                    series: [{
+                        name: 'Category Count',
+                        type: 'bar',
+                        data: [{"name":"健身造型","value":13},{"name":"资料","value":12},{"name":"LY","value":9},{"name":"文稿","value":5},{"name":"Hexo","value":5},{"name":"教学","value":4},{"name":"Markdown","value":3},{"name":"办公工具","value":3}].map(category => category.value).reverse(),
+                        label: {
+                            show: true,
+                            position: 'right',
+                            fontSize: 12
+                        },
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                                { offset: 0, color: '#91CC75' },
+                                { offset: 1, color: '#73C0DE' }
+                            ])
+                        },
+                        animationDuration: 1000
+                    }]
+                });
+                tagsChart.on('click', function(params) {
+                    if (params.componentType === 'series') {
+                        const category = params.name;
+                        window.location.href = '/categories/' + category;
+                    }
+                });
+            }
+        </script>
+    
+        
+        <script>
+            if(document.getElementById('categoriesChart')) {
+                const categoriesChart = echarts.init(document.getElementById('categoriesChart'), 'light');
+                categoriesChart.setOption({
+                    tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+                    series: [{
+                        type: 'pie',
+                        radius: '60%',
+                        data: [{"name":"资料","value":12},{"name":"LY","value":10},{"name":"网络技术","value":10},{"name":"造型概念","value":3},{"name":"造型教学","value":2}],
+                        label: {
+                            position: 'outside',
+                            formatter: '{b} {c} ({d}%)',
+                            fontSize: 12
+                        },
+                        color: ['#5470C6', '#91CC75', '#FAC858', '#EE6666', '#73C0DE', '#3BA272', '#FC8452', '#9A60B4'],
+                        animationDuration: 1000
+                    }],
+                    legend: {
+                        bottom: '0',
+                        left: 'center',
+                        data: [{"name":"资料","value":12},{"name":"LY","value":10},{"name":"网络技术","value":10},{"name":"造型概念","value":3},{"name":"造型教学","value":2}].map(tag => tag.name),
+                        textStyle: { fontSize: 12 }
+                    }
+                });
+                categoriesChart.on('click', function(params) {
+                    if (params.componentType === 'series') {
+                        const tag = params.name;
+                        window.location.href = '/tags/' + tag;
+                    }
+                });
+            }
+        </script>
+    
+    </body></html>
